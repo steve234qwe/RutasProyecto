@@ -4,11 +4,11 @@
 using namespace std;
 using namespace sf;
 
-void mapMenu(Texture & mapTexture)
+void optionMap(Texture& map)
 {
 	RenderWindow windowMap(VideoMode(1280, 720), "Mapa Tour");
 	Sprite spriteMap;
-	spriteMap.setTexture(mapTexture);
+	spriteMap.setTexture(map);
 	while (windowMap.isOpen())
 	{
 		Event eventMap{};
@@ -18,19 +18,61 @@ void mapMenu(Texture & mapTexture)
 			{
 				int xMap = eventMap.mouseButton.x;
 				int yMap = eventMap.mouseButton.y;
-				if (xMap >= 1201 && xMap <= 1251 && yMap >= 611 && yMap <= 677)
+				cout << "X" << xMap << endl << "Y" << yMap << endl;
+				if (xMap >= 1172 && xMap <= 1255 && yMap >= 598 && yMap <= 691)
 				{
 					windowMap.close();
 				}
 			}
 		}
+
 		windowMap.clear();
 		windowMap.draw(spriteMap);
 		windowMap.display();
 	}
 }
 
-void clickMenu(Event& event,Texture& mapTexture, RenderWindow& window)
+
+void subMapMenu(Texture& SubMapTexture, Texture& map)
+{
+	RenderWindow windowSubMenu(VideoMode(1280, 720), "Menu");
+	Sprite spriteSubMenu;
+	spriteSubMenu.setTexture(SubMapTexture);
+	while (windowSubMenu.isOpen())
+	{
+		Event eventSubMenu{};
+		while (windowSubMenu.pollEvent(eventSubMenu))
+		{
+			if (eventSubMenu.type == Event::MouseButtonPressed)
+			{
+				int xMap = eventSubMenu.mouseButton.x;
+				int yMap = eventSubMenu.mouseButton.y;
+				cout << "X" << xMap << endl << "Y" << yMap << endl;
+
+				if (xMap >= 422 && xMap <= 966 && yMap >= 186 && yMap <= 254)
+				{
+					optionMap(map);
+				}
+				if (xMap >= 425 && xMap <= 963 && yMap >= 376 && yMap <= 456)
+				{
+					optionMap(map);
+				}
+				if (xMap >= 1172 && xMap <= 1255 && yMap >= 598 && yMap <= 691)
+				{
+					windowSubMenu.close();
+				}
+			}
+		}
+
+		windowSubMenu.clear();
+		windowSubMenu.draw(spriteSubMenu);
+		windowSubMenu.display();
+	}
+}
+
+
+
+void clickMenu(Event& event, Texture& mapTexture, RenderWindow& window, Texture& map)
 {
 	if (event.type == Event::MouseButtonPressed)
 	{
@@ -39,7 +81,7 @@ void clickMenu(Event& event,Texture& mapTexture, RenderWindow& window)
 
 		if (x >= 54 && x <= 232 && y >= 598 && y <= 657)
 		{
-			mapMenu(mapTexture);
+			subMapMenu(mapTexture, map);
 		}
 		if (x >= 1201 && x <= 1251 && y >= 611 && y <= 677)
 		{
@@ -59,12 +101,17 @@ int main()
 	}
 
 
+	Texture SubMenuTexture;
+	if (!SubMenuTexture.loadFromFile("SubMenu.png"))
+	{
+		return -1;
+	}
+
 	Texture mapTexture;
 	if (!mapTexture.loadFromFile("MapaBase.png"))
 	{
 		return -1;
 	}
-
 	Sprite sprite;
 	sprite.setTexture(texture);
 
@@ -74,7 +121,7 @@ int main()
 		while (window.pollEvent(event))
 		{
 
-			clickMenu(event, mapTexture, window);
+			clickMenu(event, SubMenuTexture, window, mapTexture);
 		}
 		window.clear();
 		window.draw(sprite);
