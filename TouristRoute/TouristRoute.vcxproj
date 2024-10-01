@@ -133,7 +133,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="RouteApp.cpp" />
     <ClCompile Include="TouristRoute.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="RouteApp.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
