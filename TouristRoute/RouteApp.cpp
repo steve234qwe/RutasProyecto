@@ -1,25 +1,19 @@
-
 #include "RouteApp.h"
+#include <iostream>
 
 RouteApp::RouteApp()
 {
 	window.create(VideoMode(1280, 720), "Proyecto Rutas");
-	
-	if (!texture.loadFromFile("Imagenes,Archivos/FondoInicial.png"))
+	if (!texture.loadFromFile("Imagenes,Archivos/ImagenInicio.png"))
 	{
 		return;
 	}
-	if (!SubMenuTexture.loadFromFile("Imagenes,Archivos/SubMenu.png"))
+	if (!mapTexture.loadFromFile("Mapa.png"))
 	{
 		return;
 	}
-	if (!mapTexture.loadFromFile("Imagenes,Archivos/MapaBase.png"))
-	{
-		return;
-	}
-
-
 }
+
 RouteApp::~RouteApp()
 {
 }
@@ -33,8 +27,7 @@ void RouteApp::startApp()
 		Event event{};
 		while (window.pollEvent(event))
 		{
-
-			clickMenu(event, SubMenuTexture, window, mapTexture);
+			clickMenu(event);
 		}
 		window.clear();
 		window.draw(sprite);
@@ -42,63 +35,31 @@ void RouteApp::startApp()
 	}
 }
 
-void RouteApp::clickMenu(Event& event, Texture& mapTexture, RenderWindow& window, Texture& map)
+void RouteApp::clickMenu(Event& event)
 {
-
-
 	if (event.type == Event::MouseButtonPressed)
 	{
 		int x = event.mouseButton.x;
 		int y = event.mouseButton.y;
-		if (x >= 54 && x <= 232 && y >= 598 && y <= 657)
+
+		if (x >= 60 && x <= 266 && y >= 551 && y <= 579)
 		{
-			subMapMenu(mapTexture, map);
+			window.setVisible(false);
+			optionMap();
+		}
+		if (x >= 52 && x <= 273 && y >= 612 && y <= 638)
+		{
+			window.setVisible(false);
+			optionMap();
 		}
 		if (x >= 1200 && x <= 1257 && y >= 610 && y <= 681)
 		{
 			window.close();
 		}
 	}
-
 }
 
-void RouteApp::subMapMenu(Texture& SubMapTexture, Texture& map)
-{
-	windowSubMenu.create(VideoMode(1280, 720), "Menu");
-	Sprite spriteSubMenu;
-	spriteSubMenu.setTexture(SubMapTexture);
-	while (windowSubMenu.isOpen())
-	{
-		Event eventSubMenu{};
-		while (windowSubMenu.pollEvent(eventSubMenu))
-		{
-			if (eventSubMenu.type == Event::MouseButtonPressed)
-			{
-				int xMenu = eventSubMenu.mouseButton.x;
-				int yMenu = eventSubMenu.mouseButton.y;
-
-				if (xMenu >= 422 && xMenu <= 966 && yMenu >= 186 && yMenu <= 254)
-				{
-					optionMap(map);
-				}
-				if (xMenu >= 425 && xMenu <= 963 && yMenu >= 376 && yMenu <= 456)
-				{
-					optionMap(map);
-				}
-				if (xMenu >= 1172 && xMenu <= 1255 && yMenu >= 598 && yMenu <= 691)
-				{
-					windowSubMenu.close();
-				}
-			}
-		}
-
-		windowSubMenu.clear();
-		windowSubMenu.draw(spriteSubMenu);
-		windowSubMenu.display();
-	}
-}
-
-void RouteApp::optionMap(Texture& map)
+void RouteApp::optionMap()
 {
 	windowMap.create(VideoMode(1280, 720), "Mapa Tour");
 	Sprite spriteMap;
@@ -112,9 +73,11 @@ void RouteApp::optionMap(Texture& map)
 			{
 				int xMap = eventMap.mouseButton.x;
 				int yMap = eventMap.mouseButton.y;
-				if (xMap >= 1172 && xMap <= 1255 && yMap >= 598 && yMap <= 691)
+				cout << "X" << xMap << "\nY" << yMap << endl;
+				if (xMap >= 6 && xMap <= 94 && yMap >= 607 && yMap <= 713)
 				{
 					windowMap.close();
+					window.setVisible(true);
 				}
 			}
 		}

@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Victor\\Desktop\\TouristRoute\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F7821FA8-DC6F-46F7-BAFC-3362966AD108}|TouristRoute\\TouristRoute.vcxproj|C:\\Users\\Victor\\Desktop\\TouristRoute\\TouristRoute\\RouteApp.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F7821FA8-DC6F-46F7-BAFC-3362966AD108}|TouristRoute\\TouristRoute.vcxproj|solutionrelative:TouristRoute\\RouteApp.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F7821FA8-DC6F-46F7-BAFC-3362966AD108}|TouristRoute\\TouristRoute.vcxproj|C:\\Users\\Victor\\Desktop\\TouristRoute\\TouristRoute\\RouteApp.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{F7821FA8-DC6F-46F7-BAFC-3362966AD108}|TouristRoute\\TouristRoute.vcxproj|solutionrelative:TouristRoute\\RouteApp.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F7821FA8-DC6F-46F7-BAFC-3362966AD108}|TouristRoute\\TouristRoute.vcxproj|C:\\Users\\Victor\\Desktop\\TouristRoute\\TouristRoute\\RouteApp.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F7821FA8-DC6F-46F7-BAFC-3362966AD108}|TouristRoute\\TouristRoute.vcxproj|solutionrelative:TouristRoute\\RouteApp.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F7821FA8-DC6F-46F7-BAFC-3362966AD108}|TouristRoute\\TouristRoute.vcxproj|C:\\Users\\Victor\\Desktop\\TouristRoute\\TouristRoute\\TouristRoute.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -22,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
@@ -32,35 +32,33 @@
               "RelativeDocumentMoniker": "TouristRoute\\TouristRoute.cpp",
               "ToolTip": "C:\\Users\\Victor\\Desktop\\TouristRoute\\TouristRoute\\TouristRoute.cpp",
               "RelativeToolTip": "TouristRoute\\TouristRoute.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-09-27T00:53:30.601Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "RouteApp.h",
               "DocumentMoniker": "C:\\Users\\Victor\\Desktop\\TouristRoute\\TouristRoute\\RouteApp.h",
               "RelativeDocumentMoniker": "TouristRoute\\RouteApp.h",
               "ToolTip": "C:\\Users\\Victor\\Desktop\\TouristRoute\\TouristRoute\\RouteApp.h",
               "RelativeToolTip": "TouristRoute\\RouteApp.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-10-01T21:26:22.849Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "RouteApp.cpp",
               "DocumentMoniker": "C:\\Users\\Victor\\Desktop\\TouristRoute\\TouristRoute\\RouteApp.cpp",
               "RelativeDocumentMoniker": "TouristRoute\\RouteApp.cpp",
               "ToolTip": "C:\\Users\\Victor\\Desktop\\TouristRoute\\TouristRoute\\RouteApp.cpp",
               "RelativeToolTip": "TouristRoute\\RouteApp.cpp",
-              "ViewState": "AgIAADYAAAAAAAAAAAAAABIAAAACAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-10-01T21:26:24.433Z",
               "IsPinned": true,

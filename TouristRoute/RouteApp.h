@@ -10,7 +10,6 @@ private:
 	RenderWindow windowMap;
 	RenderWindow windowSubMenu;
 	Texture texture;
-	Texture SubMenuTexture;
 	Texture mapTexture;
 	
 
@@ -19,9 +18,8 @@ public:
 	~RouteApp();
 
 	void startApp();
-	void clickMenu(Event& event, Texture& mapTexture, RenderWindow& window, Texture& map);
-	void subMapMenu(Texture& SubMapTexture, Texture& map);
-	void optionMap(Texture& map);
+	void clickMenu(Event& event);
+	void optionMap();
 
 };
 
